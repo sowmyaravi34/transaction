@@ -1,0 +1,5 @@
+com\payment\transaction\TransactionApplication.class
+com\payment\transaction\controller\RegistrationController.class
+com\payment\transaction\service\RegistrationService.class
+com\payment\transaction\model\User.class
+com\payment\transaction\repository\RegistrationRepository.class

@@ -11,27 +11,31 @@ public class User {
 	
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
-	private int id;
+	private int customerId;
 	private String emailId;
 	private String userName;
 	private String password;
+	private String accountNumber;
+	private int balance;
 	
 	public User() {
 	}
 	
-	public User(int id, String emailId, String userName, String password) {
+	public User(int customerId, String emailId, String userName, String password,String accountNumber, int balance) {
 		super();
-		this.id = id;
+		this.customerId = customerId;
 		this.emailId = emailId;
 		this.userName = userName;
 		this.password = password;
+		this.accountNumber = accountNumber;
+		this.balance = balance;
 	}
 	
-	public int getId() {
-		return id;
+	public int getCustomerId() {
+		return customerId;
 	}
-	public void setId(int id) {
-		this.id = id;
+	public void setCustomerId(int customerId) {
+		this.customerId = customerId;
 	}
 	public String getEmailId() {
 		return emailId;
@@ -50,6 +54,18 @@ public class User {
 	}
 	public void setPassword(String password) {
 		this.password = password;
+	}
+	public String getAccountNumber() {
+		return accountNumber;
+	}
+	public void setAccountNumber(String accountNumber) {
+		this.accountNumber = accountNumber;
+	}
+	public int getBalance() {
+		return balance;
+	}
+	public void setBalance(int balance) {
+		this.balance = balance;
 	}
 
 }

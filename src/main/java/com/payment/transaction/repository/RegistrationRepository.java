@@ -9,4 +9,9 @@ public interface RegistrationRepository extends JpaRepository<User, Integer>{
 	public User findByEmailId(String emailId);
 	
 	public User findByEmailIdAndPassword(String emailId, String Password);
+
+	public User findByCustomerId(int custId);
+
+	public User findByAccountNumber(String trgAccNo);
+	
 }

@@ -6,6 +6,7 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RestController;
 
+import com.payment.transaction.model.LocalPaymentInput;
 import com.payment.transaction.model.User;
 import com.payment.transaction.service.RegistrationService;
 
@@ -44,4 +45,12 @@ public class RegistrationController {
 		}
 		return userobj;
 	}
+	
+	@PostMapping("/localPayment")
+	public LocalPaymentInput doLocalPayment(@RequestBody LocalPaymentInput input) {
+		LocalPaymentInput inputObj = null;
+		inputObj = service.doLocalPayment(input);
+		return inputObj;
+	}
+	
 }
